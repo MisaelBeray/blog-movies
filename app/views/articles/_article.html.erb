@@ -1,6 +1,6 @@
 <article class="blog-post">
   <h2 class="blog-post-title"><%= article.title %></h2>
-  <p class="blog-post-meta"><%= formatDate_mdy(article.created_at) %> <a href="#">Admin</a></p>
+  <p class="blog-post-meta"><%= formatDate_mdy(article.created_at) %> by <%= article.user.email.partition('@').first %></p>
   <p><%= truncate(article.body, length: 150 ) %></p>
   <p><%= link_to 'Continue reading ...', article, 
   class: 'btn btn-link' %></p>
