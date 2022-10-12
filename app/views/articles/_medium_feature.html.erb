@@ -5,7 +5,7 @@
         <%= article.category.name %>
       </strong>
       <h3 class="mb-0"><%= article.title %></h3>
-      <div class="mb-1 text-muted"><%= formatDate_mdy(article.created_at) %> by <%= article.user.email.partition('@').first %></div>
+      <div class="mb-1 text-muted"><%= render 'article_detail', article: article %></div>
       <p class="card-text mb-auto"><%= truncate(article.body, length: 150) %></p>
       <%= link_to 'Continue reading... ', article, class: 'stretched-link' %>
     </div>
