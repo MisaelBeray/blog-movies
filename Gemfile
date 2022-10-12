@@ -48,3 +48,7 @@ gem "kaminari", "~> 1.2"
 gem "devise", "~> 4.8"
 
 gem 'net-smtp', require: false
+
+gem "pundit", "~> 2.2"
+
+gem 'rolify', '~> 6.0'
