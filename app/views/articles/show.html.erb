@@ -8,4 +8,13 @@
   data: { confirm: 'Are you sure?' }, 
   class: 'btn btn-danger' if policy(@article).destroy?%>
   <%= link_to 'Back', root_path, class: 'btn btn-secondary' %>
+  <hr class='divider' />
+  <% if @article.comments.present? %>
+    <h2 class="mt-3">Comments</h2>
+  <% end %>
+  <%= render @article.comments %>
+  <% if policy(:comment).create? %>
+    <h2>Add a comment:</h2>
+    <%= render 'comments/form' %>
+  <% end %>
 </article>

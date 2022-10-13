@@ -33,6 +33,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem "letter_opener", "~> 1.8"
+  gem "bullet"
 end
 
 group :test do
@@ -52,3 +53,4 @@ gem 'net-smtp', require: false
 gem "pundit", "~> 2.2"
 
 gem 'rolify', '~> 6.0'
+gem "groupdate", "~> 6.1"

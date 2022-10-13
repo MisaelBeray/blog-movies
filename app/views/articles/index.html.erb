@@ -19,8 +19,8 @@
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
       <% @categories.each do |c| %>
-        <%= link_to c.name, root_path(category: c.name),
-        class: "p-2 link-secondary #{'category-active' if c.name.to_s == params[:category]}"%>
+        <%= link_to c.name, articles_path(category: c.name),
+        class: "p-2 link-secondary #{'filter-active' if c.name.to_s == params[:category]}"%>
       <% end %>
     </nav>
   </div>
